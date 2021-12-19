@@ -21,7 +21,7 @@ request('https://reformationbrewery.com/beers/jogr/', (error, response, html) =>
                 .text()
                 .replace(/\s\s+/g,'')
 
-        console.log(name, description)
+        console.log(name, '\n', description)
         })
     }
 
@@ -45,11 +45,38 @@ request('https://reformationbrewery.com/beers/oren-pale-ale/', (error, response,
                 .find('.content, p')
                 .text()
                 .replace(/\s\s+/g,'')
-    console.log(name, description)
+    console.log(name, '\n',description)
 
         })
     }
 })
+
+request('https://reformationbrewery.com/beers/silver-comet-nolan-v-10/', (error, response, html) => {
+    if (!error & response.statusCode == 200) {
+        const $ = cheerio.load(html)
+
+        $('.wrapper').each((i, jogr) => {
+            const name = $(jogr)
+                .find('.beer__mobile-title')
+                .text()
+                .replace(/\s\s+/g, '')
+            const style = $(jogr)
+                .find('.beer__style')
+                .text()
+                .replace(/\s\s+/g,'')
+            const ABV = $(jogr)
+                .find('.beer__abv')
+                .text()
+            const description = $(jogr)
+                .find('.content, p \n')
+                .text()
+                .replace(/\s\s+/g,'')
+
+        console.log(name,'\n', description)
+        })
+    }
+})
+
 
 
 

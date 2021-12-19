@@ -26,8 +26,8 @@ request("https://woodstock.reformationbrewery.com/", (error, response, html) => 
                 .find('a')
                 .attr('href')
 
-        
-       console.log(name, style, ABV, link)
+    
+        console.log(name, '\n' ,link)
             
         //writeStream.write(`${name}, ${style}, ${ABV}, ${link} \n`)
 
