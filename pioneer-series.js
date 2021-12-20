@@ -1,6 +1,7 @@
 const request = require('request')
 const cheerio = require('cheerio')
 
+// The Pioneer series of beer consists of limited releases at Reformation Brewery
 // Parsing through the web page for the Peachy Keen Milkshake IPA
 request('https://reformationbrewery.com/beers/peachy-keen-milkshake-ipa/', (error, response, html) => {
     if (!error && response.statusCode == 200) {

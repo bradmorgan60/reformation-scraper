@@ -13,21 +13,19 @@ request("https://woodstock.reformationbrewery.com/", (error, response, html) => 
 
         $('.col--flex').each((i, brad) => {
             const name = $(brad)
-                .find('.beer-card__name')
+                .find('.beer-card__name, h3')
                 .text()
-                .replace(/\s\s+/g,'')
+                .replace(/\s\s+/g, '')
             const style = $(brad)
                 .find('.beer-card__style')
                 .text()
+                .replace(/\s\s+/g,'')
             const ABV = $(brad)
                 .find('.beer-card__abv')
                 .text()
-            const link = $(brad)
-                .find('a')
-                .attr('href')
-
-    
-        console.log(name, '\n' ,link)
+                .replace(/\s\s+/g,'')
+            console.log(name,'\n', style, '\n', ABV)
+        
             
         //writeStream.write(`${name}, ${style}, ${ABV}, ${link} \n`)
 
