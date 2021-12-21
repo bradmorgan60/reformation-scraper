@@ -24,7 +24,10 @@ request("https://woodstock.reformationbrewery.com/", (error, response, html) => 
                 .find('.beer-card__abv')
                 .text()
                 .replace(/\s\s+/g,'')
-            console.log(name,'\n', style, '\n', ABV)
+            const link = $(brad)
+                .find('.beer-card')
+                .attr('href')
+            console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
             
         //writeStream.write(`${name}, ${style}, ${ABV}, ${link} \n`)
