@@ -5,10 +5,11 @@ const fs = require('fs')
 const writeStream = fs.createWriteStream('beer.csv')
 
 // write headers
-writeStream.write('Beer Name, Style, ABV, Link \n')
+//writeStream.write('Beer Name, Style, ABV, Link \n')
 
 // Woodstock Location
 request("https://woodstock.reformationbrewery.com/", (error, response, html) => {
+    console.log('---WOODSTOCK---')
     if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html)
 
@@ -28,20 +29,20 @@ request("https://woodstock.reformationbrewery.com/", (error, response, html) => 
             const link = $(brad)
                 .find('.beer-card')
                 .attr('href')
-           //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
+        console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
             
-        writeStream.write(`${name}, ${style}, ${ABV}, ${link} \n`)
+        //writeStream.write(`${name}, ${style}, ${ABV}, ${link} \n`)
 
         })
-        //console.log('------------------')
+        console.log('------------------')
 
-        //console.log('Scraping done...')
     }
 })
 
 // Canton location
 request("https://canton.reformationbrewery.com/", (error, response, html) => {
+    console.log('---CANTON---')
     if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html)
 
@@ -61,19 +62,20 @@ request("https://canton.reformationbrewery.com/", (error, response, html) => {
             const link = $(brad)
                 .find('.beer-card')
                 .attr('href')
-           //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
+        console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
             
-        writeStream.write(`${name}, ${style}, ${ABV}, ${link} \n`)
+        //writeStream.write(`${name}, ${style}, ${ABV}, ${link} \n`)
 
         })
-        //console.log('------------------')
+        console.log('------------------')
 
         //console.log('Scraping done...')
     }
 })
 
 request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
+    console.log('---SMYRNA---')
     if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html)
 
@@ -93,14 +95,14 @@ request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
             const link = $(brad)
                 .find('.beer-card')
                 .attr('href')
-           //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
+        //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
             
-           writeStream.write(`${name}, ${style}, ${ABV}, ${link} \n`)
+           //writeStream.write(`${name}, ${style}, ${ABV}, ${link} \n`)
 
         })
-        console.log('Scraping done...')
-        //console.log('------------------')
+        //console.log('Scraping done...')
+        console.log('------------------')
 
     }
 
