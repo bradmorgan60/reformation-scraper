@@ -5,7 +5,7 @@ const fs = require('fs')
 const writeStream = fs.createWriteStream('beer.csv')
 
 // write headers
-writeStream.write('Location, Beer Name, Style, ABV, Link')
+writeStream.write('Location, Beer Name, Style, ABV, Link \n')
 
 // Woodstock Location
 request("https://woodstock.reformationbrewery.com/", (error, response, html) => {
