@@ -2,7 +2,7 @@ const cheerio = require('cheerio')
 const { text } = require('cheerio/lib/api/manipulation')
 const request = require('request')
 const fs = require('fs')
-const writeStream = fs.createWriteStream('beer.csv')
+const writeStream = fs.createWriteStream('ReformationAllLoc.csv')
 
 // write headers
 writeStream.write('Location, Beer Name, Style, ABV, Link \n')
@@ -74,7 +74,7 @@ request("https://canton.reformationbrewery.com/", (error, response, html) => {
         //console.log('Scraping done...')
     }
 })
-
+// Smyrna Location
 request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
     if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html)
