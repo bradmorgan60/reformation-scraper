@@ -2,10 +2,15 @@ const cheerio = require('cheerio')
 const { text } = require('cheerio/lib/api/manipulation')
 const request = require('request')
 const fs = require('fs')
+const jsonfile = require('jsonfile')
+const { data } = require('cheerio/lib/api/attributes')
 const writeStream = fs.createWriteStream('ReformationAllLoc.csv')
+
+const PORT = process.env.PORT || 1600
 
 // write headers
 writeStream.write('Location, Beer Name, Style, ABV, Link \n')
+
 
 // Woodstock Location
 request("https://woodstock.reformationbrewery.com/", (error, response, html) => {
@@ -31,12 +36,11 @@ request("https://woodstock.reformationbrewery.com/", (error, response, html) => 
                 .attr('href')
         //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
-            
         writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
+
 
         })
         //console.log('------------------')
-
     }
 })
 
@@ -65,14 +69,13 @@ request("https://canton.reformationbrewery.com/", (error, response, html) => {
                 .attr('href')
         //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
-            
-        writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
+       // writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
 
         })
         //console.log('------------------')
-
         //console.log('Scraping done...')
     }
+    
 })
 // Smyrna Location
 request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
@@ -100,7 +103,7 @@ request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
         //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
             
-        writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
+       writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
 
         })
         console.log('Scraping done...')
@@ -109,4 +112,14 @@ request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
     }
 
 })
+
+const file = 'data.json'
+jsonfile.readFile(file)
+    .then(obj => console.dir(obj))
+    .catch(error => console.error(error))
+
+
+
+
+
 

@@ -4,7 +4,7 @@
   "description": "Web scraping tool to let me know if there are any new beers. This will help me prepare for my shifts better.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "keywords": [
     "scraper",
@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
+    "jsonfile": "^6.1.0",
     "request": "^2.88.2"
   }
 }
