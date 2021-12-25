@@ -113,10 +113,6 @@ request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
 
 })
 
-const file = 'data.json'
-jsonfile.readFile(file)
-    .then(obj => console.dir(obj))
-    .catch(error => console.error(error))
 
 
 
