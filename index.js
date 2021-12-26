@@ -66,7 +66,7 @@ request("https://canton.reformationbrewery.com/", (error, response, html) => {
                 .attr('href')
         //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
-        writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
+        //writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
 
         })
         //console.log('------------------')
@@ -100,14 +100,11 @@ request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
         //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
             
-        writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
+        //writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
 
         })
         console.log('Scraping done...')
         //console.log('------------------')
-
-    
-
     }
 
 })
