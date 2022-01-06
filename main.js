@@ -31,7 +31,7 @@ request("https://woodstock.reformationbrewery.com/", (error, response, html) => 
             const link = $(brad)
                 .find('.beer-card')
                 .attr('href')
-        //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
+        console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
         writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
 
@@ -64,9 +64,9 @@ request("https://canton.reformationbrewery.com/", (error, response, html) => {
             const link = $(brad)
                 .find('.beer-card')
                 .attr('href')
-        //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
+        console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
-        //writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
+        writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
 
         })
         //console.log('------------------')
@@ -97,10 +97,10 @@ request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
             const link = $(brad)
                 .find('.beer-card')
                 .attr('href')
-        //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
+        console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
             
-        //writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
+        writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
 
         })
         console.log('Scraping done...')
