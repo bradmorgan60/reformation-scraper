@@ -1,9 +1,15 @@
+
+let d = new Date()
+alert("Beer serving as of " + d)
+
+const beerDisplay = document.querySelector('.beer')
+
 const cheerio = require('cheerio')
 const request = require('request')
 const fs = require('fs')
 const writeStream = fs.createWriteStream('ReformationAllLoc.csv')
 
-//const PORT = process.env.PORT || 1600
+const PORT = process.env.PORT || 1700
 
 // write headers
 writeStream.write('Location, Beer Name, Style, ABV, Link \n')
@@ -31,7 +37,7 @@ request("https://woodstock.reformationbrewery.com/", (error, response, html) => 
             const link = $(brad)
                 .find('.beer-card')
                 .attr('href')
-        console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
+        //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
         writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
 
@@ -64,7 +70,7 @@ request("https://canton.reformationbrewery.com/", (error, response, html) => {
             const link = $(brad)
                 .find('.beer-card')
                 .attr('href')
-        console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
+        //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
         writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
 
@@ -97,17 +103,22 @@ request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
             const link = $(brad)
                 .find('.beer-card')
                 .attr('href')
-        console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
+        //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
             
         writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
 
         })
-        console.log('Scraping done...')
+        //console.log('Scraping done...')
         //console.log('------------------')
+        console.log(`Scraping done...server running on port ${PORT}`)
+
     }
 
+   
+
 })
+
 
 
 

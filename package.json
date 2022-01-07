@@ -2,9 +2,10 @@
   "name": "reformation",
   "version": "1.0.0",
   "description": "Web scraping tool to let me know if there are any new beers. This will help me prepare for my shifts better.",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node main",
+    "dev": "nodemon main"
   },
   "keywords": [
     "scraper",
@@ -15,6 +16,7 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
     "jsonfile": "^6.1.0",
+    "nodemon": "^2.0.15",
     "request": "^2.88.2"
   }
 }

@@ -1,27 +1,4 @@
 Location, Beer Name, Style, ABV, Link 
-CANTON, JOGR, Juicy Lager, 4.9% ABV, https://reformationbrewery.com/beers/jogr/ 
-CANTON, A Cold One, Lager - Pale, 4.4% ABV, https://reformationbrewery.com/beers/a-cold-one/ 
-CANTON, Silver Comet – Nolan V.10, IPA - New England, 7.2% ABV, https://reformationbrewery.com/beers/silver-comet-nolan-v-10/ 
-CANTON, Haddy, Wheat Beer - Witbier, 4.8% ABV, https://reformationbrewery.com/beers/haddy/ 
-CANTON, Cadence, Belgian Dubbel, 6.9% ABV, https://reformationbrewery.com/beers/cadence/ 
-CANTON, Jude, Belgian-Style Tripel, 9.2% ABV, https://reformationbrewery.com/beers/jude/ 
-CANTON, Stark, Toasted Porter, 5.5% ABV, https://reformationbrewery.com/beers/stark/ 
-CANTON, Declaration, Stout - Russian Imperial, 9.7% ABV, https://reformationbrewery.com/beers/declaration/ 
-CANTON, Etowah Pale Ale, Pale Ale - American, 4.8% ABV, https://reformationbrewery.com/beers/etowah-pale-ale/ 
-CANTON, On A New Level, IPA - American, 6.2% ABV, https://reformationbrewery.com/beers/on-a-new-level/ 
-CANTON, Oren, Pale Ale - American, 5% ABV, https://reformationbrewery.com/beers/oren-pale-ale/ 
-CANTON, Good Omen 2019, Bière de Champagne / Bière Brut, 7.6% ABV, https://reformationbrewery.com/beers/good-omen-2019/ 
-CANTON, Alani Rosé Ale, Sour - Fruited, 4.7% ABV, https://reformationbrewery.com/beers/sour-alani/ 
-CANTON, No Simple Highway, Pilsner - Other, 4.7% ABV, https://reformationbrewery.com/beers/no-simple-highway-2/ 
-CANTON, Raspberry Lime Seltzer, Hard Seltzer, 5% ABV, https://reformationbrewery.com/beers/raspberry-lime-seltzer/ 
-CANTON, Peachy Keen | Milkshake IPA, IPA - Milkshake, 6.6% ABV, https://reformationbrewery.com/beers/peachy-keen-milkshake-ipa/ 
-CANTON, No Small Measure, Milk Stout, 10% ABV, https://reformationbrewery.com/beers/no-small-measure-milk-stout/ 
-CANTON, Dark Alani, Sour - Other, 4.7% ABV, https://reformationbrewery.com/beers/dark-alani/ 
-CANTON, ramble with white tea, Sour with White Tea, 4.7% ABV, https://reformationbrewery.com/beers/ramble-with-white-tea/ 
-CANTON, Coffee Saison, Farmhouse Ale - Saison, 4% ABV, https://reformationbrewery.com/beers/coffee-saison/ 
-CANTON, Mittens Loves Cucumber, Sour - Gose, 4.7% ABV, https://reformationbrewery.com/beers/mittens-loves-cucumber/ 
-CANTON, Batch #4, IPA - American, 6.8% ABV, https://reformationbrewery.com/beers/batch-4/ 
-CANTON, Cold IPA, IPA - American, 6.5% ABV, https://reformationbrewery.com/beers/cold-ipa/ 
 WOODSTOCK, JOGR, Juicy Lager, 4.9% ABV, https://reformationbrewery.com/beers/jogr/ 
 WOODSTOCK, Woodstock Pale Ale, Pale Ale - American, 4.8% ABV, https://reformationbrewery.com/beers/woodstock-pale-ale/ 
 WOODSTOCK, Nolan the Wanderer | Rotating IPA Series, IPA - American, 7.2% ABV, https://reformationbrewery.com/beers/nolan-the-wanderer-rotating-ipa-series/ 
@@ -41,7 +18,6 @@ WOODSTOCK, Silver Comet – Nolan V.10, IPA - New England, 7.2% ABV, https://ref
 WOODSTOCK, When the Sun Goes Down, Stout - Milk / Sweet, 7.4% ABV, https://reformationbrewery.com/beers/when-the-sun-goes-down/ 
 WOODSTOCK, ramble with white tea, Sour with White Tea, 4.7% ABV, https://reformationbrewery.com/beers/ramble-with-white-tea/ 
 WOODSTOCK, A Cold One, Lager - Pale, 4.4% ABV, https://reformationbrewery.com/beers/a-cold-one/ 
-WOODSTOCK, Orangezilla, IPA - Milkshake, 6.1% ABV, https://reformationbrewery.com/beers/orangezilla/ 
 WOODSTOCK, No Simple Highway, Pilsner - Other, 4.7% ABV, https://reformationbrewery.com/beers/no-simple-highway-2/ 
 WOODSTOCK, Raspberry Lime Seltzer, Hard Seltzer, 5% ABV, https://reformationbrewery.com/beers/raspberry-lime-seltzer/ 
 WOODSTOCK, Coffee Saison, Farmhouse Ale - Saison, 4% ABV, https://reformationbrewery.com/beers/coffee-saison/ 
@@ -66,3 +42,25 @@ SMYRNA, Declaration, Stout - Russian Imperial, 9.7% ABV, https://reformationbrew
 SMYRNA, Dr. Don Pecan, Pecan Doppelbock, 9.5% ABV, https://reformationbrewery.com/beers/dr-don-pecan/ 
 SMYRNA, You’re Better Off Somewhere Else, Saison, 3.9% ABV, https://reformationbrewery.com/beers/youre-better-off-somewhere-else/ 
 SMYRNA, SORBA Woodstock | DWWO V.11, Citra Hopped New England IPA, 6% ABV, https://reformationbrewery.com/beers/sorba-woodstock-dwwo-v-11/ 
+CANTON, JOGR, Juicy Lager, 4.9% ABV, https://reformationbrewery.com/beers/jogr/ 
+CANTON, A Cold One, Lager - Pale, 4.4% ABV, https://reformationbrewery.com/beers/a-cold-one/ 
+CANTON, Silver Comet – Nolan V.10, IPA - New England, 7.2% ABV, https://reformationbrewery.com/beers/silver-comet-nolan-v-10/ 
+CANTON, Haddy, Wheat Beer - Witbier, 4.8% ABV, https://reformationbrewery.com/beers/haddy/ 
+CANTON, Cadence, Belgian Dubbel, 6.9% ABV, https://reformationbrewery.com/beers/cadence/ 
+CANTON, Jude, Belgian-Style Tripel, 9.2% ABV, https://reformationbrewery.com/beers/jude/ 
+CANTON, Stark, Toasted Porter, 5.5% ABV, https://reformationbrewery.com/beers/stark/ 
+CANTON, Declaration, Stout - Russian Imperial, 9.7% ABV, https://reformationbrewery.com/beers/declaration/ 
+CANTON, Etowah Pale Ale, Pale Ale - American, 4.8% ABV, https://reformationbrewery.com/beers/etowah-pale-ale/ 
+CANTON, On A New Level, IPA - American, 6.2% ABV, https://reformationbrewery.com/beers/on-a-new-level/ 
+CANTON, Oren, Pale Ale - American, 5% ABV, https://reformationbrewery.com/beers/oren-pale-ale/ 
+CANTON, Good Omen 2019, Bière de Champagne / Bière Brut, 7.6% ABV, https://reformationbrewery.com/beers/good-omen-2019/ 
+CANTON, Alani Rosé Ale, Sour - Fruited, 4.7% ABV, https://reformationbrewery.com/beers/sour-alani/ 
+CANTON, No Simple Highway, Pilsner - Other, 4.7% ABV, https://reformationbrewery.com/beers/no-simple-highway-2/ 
+CANTON, Raspberry Lime Seltzer, Hard Seltzer, 5% ABV, https://reformationbrewery.com/beers/raspberry-lime-seltzer/ 
+CANTON, No Small Measure, Milk Stout, 10% ABV, https://reformationbrewery.com/beers/no-small-measure-milk-stout/ 
+CANTON, Dark Alani, Sour - Other, 4.7% ABV, https://reformationbrewery.com/beers/dark-alani/ 
+CANTON, ramble with white tea, Sour with White Tea, 4.7% ABV, https://reformationbrewery.com/beers/ramble-with-white-tea/ 
+CANTON, Coffee Saison, Farmhouse Ale - Saison, 4% ABV, https://reformationbrewery.com/beers/coffee-saison/ 
+CANTON, Mittens Loves Cucumber, Sour - Gose, 4.7% ABV, https://reformationbrewery.com/beers/mittens-loves-cucumber/ 
+CANTON, Batch #4, IPA - American, 6.8% ABV, https://reformationbrewery.com/beers/batch-4/ 
+CANTON, Cold IPA, IPA - American, 6.5% ABV, https://reformationbrewery.com/beers/cold-ipa/ 
