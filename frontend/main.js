@@ -17,7 +17,7 @@ writeStream.write('Location, Beer Name, Style, ABV, Link \n')
 
 
 // Woodstock Location
-request("https://woodstock.reformationbrewery.com/", (error, response, html) => {
+const Woodstock = request("https://woodstock.reformationbrewery.com/", (error, response, html) => {
     if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html)
         const location = "WOODSTOCK"
@@ -40,14 +40,15 @@ request("https://woodstock.reformationbrewery.com/", (error, response, html) => 
                 .attr('href')
         //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
-        writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
+        //writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
         })
         //console.log('------------------')
+        
     }
 })
 
 // Canton location
-request("https://canton.reformationbrewery.com/", (error, response, html) => {
+const Canton = request("https://canton.reformationbrewery.com/", (error, response, html) => {
     if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html)
         const location = "CANTON"
@@ -70,7 +71,7 @@ request("https://canton.reformationbrewery.com/", (error, response, html) => {
                 .attr('href')
         //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
-        writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
+        //writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
 
         })
         //console.log('------------------')
@@ -79,11 +80,10 @@ request("https://canton.reformationbrewery.com/", (error, response, html) => {
     
 })
 // Smyrna Location
-request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
+const Smyrna = request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
     if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html)
         const location = "SMYRNA"
-
 
         $('.col--flex').each((i, brad) => {
             const name = $(brad)
@@ -104,18 +104,14 @@ request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
         //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
             
-        writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
+        //writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
 
         })
         //console.log('Scraping done...')
         //console.log('------------------')
         console.log(`Scraping done...beer up to date`)
 
-
-
     }
-
-   
 
 })
 
