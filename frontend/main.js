@@ -1,8 +1,8 @@
 
-let d = new Date()
-alert("Beer serving as of " + d)
+// let d = new Date()
+// alert("Beer serving as of " + d)
 
-const beerDisplay = document.querySelector('.beer')
+// const beerDisplay = document.querySelector('.beer')
 
 const cheerio = require('cheerio')
 const request = require('request')
@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 1700
 
 // write headers
 writeStream.write('Location, Beer Name, Style, ABV, Link \n')
+
 
 
 // Woodstock Location
@@ -40,8 +41,6 @@ request("https://woodstock.reformationbrewery.com/", (error, response, html) => 
         //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
         writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
-
-
         })
         //console.log('------------------')
     }
@@ -52,7 +51,6 @@ request("https://canton.reformationbrewery.com/", (error, response, html) => {
     if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html)
         const location = "CANTON"
-
 
         $('.col--flex').each((i, brad) => {
             const name = $(brad)
@@ -111,7 +109,9 @@ request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
         })
         //console.log('Scraping done...')
         //console.log('------------------')
-        console.log(`Scraping done...server running on port ${PORT}`)
+        console.log(`Scraping done...beer up to date`)
+
+
 
     }
 
