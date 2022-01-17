@@ -3,7 +3,13 @@
     color: red;
 }
 
-#header {
+#main-header {
     font-weight: bold;
-    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+li, ul {
+    padding-left: 25px;
+    padding-right: 25px;
 }

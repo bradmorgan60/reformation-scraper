@@ -1,9 +1,4 @@
 
-// let d = new Date()
-// alert("Beer serving as of " + d)
-
-// const beerDisplay = document.querySelector('.beer')
-
 const cheerio = require('cheerio')
 const request = require('request')
 const fs = require('fs')
@@ -17,7 +12,7 @@ writeStream.write('Location, Beer Name, Style, ABV, Link \n')
 
 
 // Woodstock Location
-const Woodstock = request("https://woodstock.reformationbrewery.com/", (error, response, html) => {
+request("https://woodstock.reformationbrewery.com/", (error, response, html) => {
     if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html)
         const location = "WOODSTOCK"
@@ -38,9 +33,12 @@ const Woodstock = request("https://woodstock.reformationbrewery.com/", (error, r
             const link = $(brad)
                 .find('.beer-card')
                 .attr('href')
-        //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
+        // console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
-        //writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
+        writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
+       
+
+
         })
         //console.log('------------------')
         
@@ -48,7 +46,7 @@ const Woodstock = request("https://woodstock.reformationbrewery.com/", (error, r
 })
 
 // Canton location
-const Canton = request("https://canton.reformationbrewery.com/", (error, response, html) => {
+request("https://canton.reformationbrewery.com/", (error, response, html) => {
     if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html)
         const location = "CANTON"
@@ -71,8 +69,7 @@ const Canton = request("https://canton.reformationbrewery.com/", (error, respons
                 .attr('href')
         //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
-        //writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
-
+        writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
         })
         //console.log('------------------')
         //console.log('Scraping done...')
@@ -80,7 +77,7 @@ const Canton = request("https://canton.reformationbrewery.com/", (error, respons
     
 })
 // Smyrna Location
-const Smyrna = request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
+request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
     if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html)
         const location = "SMYRNA"
@@ -104,16 +101,16 @@ const Smyrna = request("https://smyrna.reformationbrewery.com/", (error, respons
         //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
             
-        //writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
+        writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
 
         })
         //console.log('Scraping done...')
         //console.log('------------------')
         console.log(`Scraping done...beer up to date`)
-
     }
-
 })
+
+
 
 
 
