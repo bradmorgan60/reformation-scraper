@@ -13,8 +13,10 @@ request('https://woodstock.reformationbrewery.com/', (error, response, html) => 
                 .find('.big-event-card__content')
                 .text()
             const link = $(event).find('.col-medium-order-1').attr('href')
-            console.log(name)
+            console.log(name, description)
         })
+
+        c
 
     }
 })

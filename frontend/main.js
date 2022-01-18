@@ -9,8 +9,6 @@ const PORT = process.env.PORT || 1700
 // write headers
 writeStream.write('Location, Beer Name, Style, ABV, Link \n')
 
-
-
 // Woodstock Location
 request("https://woodstock.reformationbrewery.com/", (error, response, html) => {
     if (!error && response.statusCode == 200) {
@@ -36,14 +34,12 @@ request("https://woodstock.reformationbrewery.com/", (error, response, html) => 
         // console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
         writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
-       
-
-
+        
         })
         //console.log('------------------')
-        
     }
 })
+
 
 // Canton location
 request("https://canton.reformationbrewery.com/", (error, response, html) => {
@@ -67,14 +63,14 @@ request("https://canton.reformationbrewery.com/", (error, response, html) => {
             const link = $(brad)
                 .find('.beer-card')
                 .attr('href')
-        //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
+        // console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
         writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
         })
         //console.log('------------------')
         //console.log('Scraping done...')
     }
-    
+
 })
 // Smyrna Location
 request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
@@ -100,7 +96,6 @@ request("https://smyrna.reformationbrewery.com/", (error, response, html) => {
                 .attr('href')
         //console.log(name,'\n', style, '\n', ABV, '\n', link, '\n')
         
-            
         writeStream.write(`${location}, ${name}, ${style}, ${ABV}, ${link} \n`)
 
         })
