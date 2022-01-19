@@ -12,6 +12,10 @@ for(let i = 0; i < beerList.length; i++){
 // Border for header
 const header = document.querySelector('#main-header')
 header.style.borderBottom = 'solid 4px black'
+header.style.borderTop = 'solid 4px black'
+header.style.borderRight = 'solid 4px black'
+header.style.borderLeft = 'solid 4px black'
+header.style.backgroundColor = '#ccc'
 
 
 const odd = document.querySelectorAll('li:nth-child(odd)')
