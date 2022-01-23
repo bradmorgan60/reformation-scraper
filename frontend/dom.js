@@ -23,19 +23,40 @@ const even = document.querySelectorAll('li:nth-child(even)')
 
 for(let i = 0; i < odd.length; i++) {
     odd[i].style.backgroundColor = '#f4f4f4'
-    even[i].style.backgroundColor = '#f4f4f4'
+    even[i].style.backgroundColor = 'black'
 }
 
 // // parent node
 // const beerList = document.querySelector('#beer-list')
 // console.log(beerList.parentNode.parentNode)
 
-const button = document.getElementById('button').addEventListener('click', buttonClicked)
+const button = document.getElementById('button').addEventListener('click', myBeer)
 
-function buttonClicked() {
-    console.log("Button clicked...")
-}
+// document.addEventListener("click", myBeer);
+
+// function myBeer() {
+//   document.getElementById("woodstock-beer-list").innerHTML = "Beer 1";
+// }
+
 
 // gray background to web page
-document.querySelector('#main').style.backgroundColor = '#ccc'
+// document.querySelector('#main').style.backgroundColor = '#ccc'
+
+// Background to list
+const listBeer = document.querySelector('#main')
+listBeer.style.backgroundColor = '#ccc'
+
+(function myBeer() {
+    const old = console.log;
+    const logger = document.getElementById('main').addEventListener('click', myBeer);
+    console.log = function (message) {
+        if (typeof message == 'object') {
+            logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message) + '<br />';
+        } else {
+            logger.innerHTML += message + '<br />';
+        }
+    }
+})();
+
+
 
