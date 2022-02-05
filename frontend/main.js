@@ -4,7 +4,7 @@ const request = require('request')
 const fs = require('fs')
 const writeStream = fs.createWriteStream('ReformationAllLoc.csv')
 
-const PORT = process.env.PORT || 1700
+// const PORT = process.env.PORT || 1700
 
 // write headers
 writeStream.write('Location, Beer Name, Style, ABV, Link \n')
